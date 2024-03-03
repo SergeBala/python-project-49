@@ -2,12 +2,12 @@
 
 
 import brain_games.cli as cli
-import brain_games.even_game as evg
+import brain_games.calc_game as calc
 
 
 def main():
     players_name = cli.welcome_user()
-    evg.even_game(players_name)
+    calc.calc_game(players_name)
 
 
 if __name__ == '__main__':
