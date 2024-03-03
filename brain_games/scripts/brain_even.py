@@ -7,7 +7,7 @@ import brain_games.even_game as evg
 
 def main():
     players_name = cli.welcome_user()
-    evg.even_game(players_name)
+    evg.even_game_new(players_name)
 
 
 if __name__ == '__main__':
