@@ -32,6 +32,7 @@ def even_game(players_name, number_of_correct_answers_to_win=3):
             if correct_answers_counter == 3:
                 print(f"Congratulations, {players_name}!")
         else:
-            print(f"\'{players_answer}\' is wrong answer ;(.Correct answer was \'{correct_answer}\'.\n"
+            print(f"\'{players_answer}\' is wrong answer ;(."
+                  + f"Correct answer was \'{correct_answer}\'.\n"
                   + f"Let's try again, {players_name}!")
             break
