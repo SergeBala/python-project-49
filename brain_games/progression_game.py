@@ -15,8 +15,8 @@ def format_prog_list_into_str(prog_list, index_to_omit):
     return prog_str
 
 def get_quest_and_answ_prog():
-    prog_len = get_random_number(5, 12)
-    prog_step = get_random_number(1, 50)
+    prog_len = get_random_number(5, 10)
+    prog_step = get_random_number(-50, 50)
     prog_start = get_random_number(0,20)
     prog_list = []
     for i in range(prog_len):
