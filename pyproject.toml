@@ -1,9 +1,14 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "A collection of 5 simple math games with a CLI interface"
+authors = ["Sergey Balashov <balashevski@gmail.com>"]
 readme = "README.md"
+repository = "https://github.com/SergeBala/python-project-49"
+classifiers = [
+    "Topic :: Education",
+    "Topic :: Entertainment"
+    ]
 packages = [
   { include = "brain_games" },
 ]
