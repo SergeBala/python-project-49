@@ -2,7 +2,7 @@
 
 
 import brain_games.cli as cli
-import brain_games.calc_game as calc
+import brain_games.games.calc_game as calc
 
 
 def main():

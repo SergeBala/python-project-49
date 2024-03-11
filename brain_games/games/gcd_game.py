@@ -1,5 +1,5 @@
 import brain_games.common_game_logic as gl
-from brain_games.even_game import get_random_number
+from brain_games.games.even_game import get_random_number
 
 
 def find_gcd(x, y):

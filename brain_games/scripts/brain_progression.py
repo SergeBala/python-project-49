@@ -2,7 +2,7 @@
 
 
 import brain_games.cli as cli
-import brain_games.progression_game as prog
+import brain_games.games.progression_game as prog
 
 
 def main():

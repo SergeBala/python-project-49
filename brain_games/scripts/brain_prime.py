@@ -2,7 +2,7 @@
 
 
 import brain_games.cli as cli
-import brain_games.prime_game as prm
+import brain_games.games.prime_game as prm
 
 
 def main():

@@ -2,7 +2,7 @@
 
 
 import brain_games.cli as cli
-import brain_games.gcd_game as gcd
+import brain_games.games.gcd_game as gcd
 
 
 def main():
