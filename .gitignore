@@ -1,6 +1,8 @@
 .venv/
 *.egg-info
 *.pyc
+__pycache__/
+dist/
 .venv/
 .coverage
 coverage.xml
