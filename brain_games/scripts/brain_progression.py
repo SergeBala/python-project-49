@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
 
-import brain_games.cli as cli
 import brain_games.games.progression_game as prog
+import brain_games.common_game_logic as gl
+from brain_games.constants import PROG_RULES
 
 
 def main():
-    players_name = cli.welcome_user()
-    prog.progression_game(players_name)
+    gl.play_a_game(PROG_RULES, prog.get_quest_and_answ_prog)
 
 
 if __name__ == '__main__':

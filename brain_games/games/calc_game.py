@@ -1,11 +1,10 @@
-import brain_games.common_game_logic as gl
 import random
-from brain_games.games.even_game import get_random_number
+from brain_games.constants import RANGE_START, RANGE_END
 
 
 def get_quest_and_answ_calc():
-    x = get_random_number()
-    y = get_random_number()
+    x = random.randint(RANGE_START, RANGE_END)
+    y = random.randint(RANGE_START, RANGE_END)
     operators = ("+", "-", "*")
     operator = random.choice(operators)
     if operator == "+":
@@ -15,8 +14,3 @@ def get_quest_and_answ_calc():
     elif operator == "*":
         answer = x * y
     return str(x) + " " + operator + " " + str(y), answer
-
-
-def calc_game(players_name):
-    rules = "What is the result of the expression?"
-    gl.play_a_game(players_name, rules, get_quest_and_answ_calc)

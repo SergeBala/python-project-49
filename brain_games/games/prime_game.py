@@ -1,5 +1,5 @@
-import brain_games.common_game_logic as gl
-from brain_games.games.even_game import get_random_number
+import random
+from brain_games.constants import RANGE_START, RANGE_END
 
 
 def is_prime(nb):
@@ -14,11 +14,6 @@ def is_prime(nb):
 
 
 def get_quest_and_answ_prime():
-    number = get_random_number()
+    number = random.randint(RANGE_START, RANGE_END)
     answer = is_prime(number)
     return str(number), answer
-
-
-def prime_game(players_name):
-    rules = "Answer \"yes\" if given number is prime. Otherwise answer \"no\"."
-    gl.play_a_game(players_name, rules, get_quest_and_answ_prime)

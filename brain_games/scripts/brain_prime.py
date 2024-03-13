@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
 
-import brain_games.cli as cli
-import brain_games.games.prime_game as prm
+import brain_games.games.prime_game as prime
+import brain_games.common_game_logic as gl
+from brain_games.constants import PRIM_RULES
 
 
 def main():
-    players_name = cli.welcome_user()
-    prm.prime_game(players_name)
+    gl.play_a_game(PRIM_RULES, prime.get_quest_and_answ_prime)
 
 
 if __name__ == '__main__':

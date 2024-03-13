@@ -1,7 +1,9 @@
 import prompt
+import brain_games.cli as cli
 
 
-def play_a_game(player_name, rules, get_quest_and_answ, nb_of_answ_to_win=3):
+def play_a_game(rules, get_quest_and_answ, nb_of_answ_to_win=3):
+    player_name = cli.welcome_user()
     print(rules)
     correct_answers_counter = 0
     while (correct_answers_counter < nb_of_answ_to_win):
