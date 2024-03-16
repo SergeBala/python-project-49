@@ -1,5 +1,8 @@
-import random
+from random import randint
 from brain_games.constants import RANGE_START, RANGE_END
+
+
+GCD_RULES = "Find the greatest common divisor of given numbers."
 
 
 def find_gcd(x, y):
@@ -9,6 +12,6 @@ def find_gcd(x, y):
 
 
 def get_quest_and_answ_gcd():
-    x = random.randint(RANGE_START, RANGE_END)
-    y = random.randint(RANGE_START, RANGE_END)
+    x = randint(RANGE_START, RANGE_END)
+    y = randint(RANGE_START, RANGE_END)
     return str(x) + " " + str(y), find_gcd(x, y)

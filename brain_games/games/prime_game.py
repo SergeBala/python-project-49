@@ -1,19 +1,22 @@
-import random
+from random import randint
 from brain_games.constants import RANGE_START, RANGE_END
+
+
+PRIM_RULES = "Answer \"yes\" if given number is prime. Otherwise answer \"no\"."
 
 
 def is_prime(nb):
     i = 2
     if nb < 2:
-        return "no"
+        return False
     while i <= (nb // i):
         if nb % i == 0:
-            return "no"
+            return False
         i += 1
-    return "yes"
+    return True
 
 
 def get_quest_and_answ_prime():
-    number = random.randint(RANGE_START, RANGE_END)
-    answer = is_prime(number)
+    number = randint(RANGE_START, RANGE_END)
+    answer = 'yes' if is_prime(number) else 'no'
     return str(number), answer

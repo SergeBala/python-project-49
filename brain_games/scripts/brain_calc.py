@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 
 
-import brain_games.games.calc_game as calc
-import brain_games.common_game_logic as gl
-from brain_games.constants import CALC_RULES
+from brain_games.games.calc_game import get_quest_and_answ_calc, CALC_RULES
+from brain_games.common_game_logic import play_a_game
 
 
 def main():
-    gl.play_a_game(CALC_RULES, calc.get_quest_and_answ_calc)
+    play_a_game(CALC_RULES, get_quest_and_answ_calc)
 
 
 if __name__ == '__main__':

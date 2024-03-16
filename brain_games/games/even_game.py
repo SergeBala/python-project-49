@@ -1,5 +1,8 @@
-import random
+from random import randint
 from brain_games.constants import RANGE_START, RANGE_END
+
+
+EVEN_RULES = "Answer \"yes\" if the number is even, otherwise answer \"no\"."
 
 
 def is_even(number):
@@ -7,6 +10,6 @@ def is_even(number):
 
 
 def get_quest_and_answ_even():
-    number = random.randint(RANGE_START, RANGE_END)
+    number = randint(RANGE_START, RANGE_END)
     answer = 'yes' if is_even(number) else 'no'
     return (number, answer)

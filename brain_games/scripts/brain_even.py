@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 
 
-import brain_games.games.even_game as evg
-import brain_games.common_game_logic as gl
-from brain_games.constants import EVEN_RULES
+from brain_games.games.even_game import get_quest_and_answ_even, EVEN_RULES
+from brain_games.common_game_logic import play_a_game
 
 
 def main():
-    gl.play_a_game(EVEN_RULES, evg.get_quest_and_answ_even)
+    play_a_game(EVEN_RULES, get_quest_and_answ_even)
 
 
 if __name__ == '__main__':

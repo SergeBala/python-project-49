@@ -1,4 +1,12 @@
-import random
+from random import randint
+from brain_games.constants import RANGE_START, RANGE_END
+
+
+PROG_RULES = "What number is missing in the progression?"
+MIN_NB_OF_ELEMS = 5
+MAX_NB_OF_ELEMS = 10
+MIN_STEP = -50
+MAX_STEP = 50
 
 
 def format_prog_list_into_str(prog_list, index_to_omit):
@@ -16,13 +24,13 @@ def format_prog_list_into_str(prog_list, index_to_omit):
 
 
 def get_quest_and_answ_prog():
-    prog_len = random.randint(5, 10)
-    prog_step = random.randint(-50, 50)
-    prog_start = random.randint(0, 20)
+    prog_len = randint(MIN_NB_OF_ELEMS, MAX_NB_OF_ELEMS)
+    prog_step = randint(MIN_STEP, MAX_STEP)
+    prog_start = randint(RANGE_START, RANGE_END)
     prog_list = []
     for i in range(prog_len):
         prog_list.append(prog_start + (i * prog_step))
-    index_to_omit = random.randint(0, prog_len - 1)
+    index_to_omit = randint(0, prog_len - 1)
     prog_str = format_prog_list_into_str(prog_list, index_to_omit)
     answer = str(prog_list[index_to_omit])
     return prog_str, answer
