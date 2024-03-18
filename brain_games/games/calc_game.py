@@ -2,10 +2,10 @@ from random import randint, choice
 from brain_games.constants import RANGE_START, RANGE_END
 
 
-CALC_RULES = "What is the result of the expression?"
+RULES = "What is the result of the expression?"
 
 
-def get_quest_and_answ_calc():
+def get_quest_and_answ():
     x = randint(RANGE_START, RANGE_END)
     y = randint(RANGE_START, RANGE_END)
     operators = ("+", "-", "*")

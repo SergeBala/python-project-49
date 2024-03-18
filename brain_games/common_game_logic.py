@@ -5,12 +5,12 @@ import brain_games.cli as cli
 NUMBER_OF_ANSWERS_TO_WIN = 3
 
 
-def run_game(rules, get_quest_and_answ):
+def run_game(game_module):
     player_name = cli.welcome_user()
-    print(rules)
+    print(game_module.RULES)
     correct_answers_counter = 0
     while correct_answers_counter < NUMBER_OF_ANSWERS_TO_WIN:
-        current_question, correct_answer = get_quest_and_answ()
+        current_question, correct_answer = game_module.get_quest_and_answ()
         print(f"Question: {current_question}")
         players_answer = prompt.string("Your answer: ")
         if players_answer == str(correct_answer):

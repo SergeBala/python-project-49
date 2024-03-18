@@ -2,7 +2,7 @@ from random import randint
 from brain_games.constants import RANGE_START, RANGE_END
 
 
-PROG_RULES = "What number is missing in the progression?"
+RULES = "What number is missing in the progression?"
 MIN_NB_OF_ELEMS = 5
 MAX_NB_OF_ELEMS = 10
 MIN_STEP = -50
@@ -23,7 +23,7 @@ def format_list_to_str(prog_list, index_to_omit):
     return prog_str
 
 
-def get_quest_and_answ_prog():
+def get_quest_and_answ():
     len = randint(MIN_NB_OF_ELEMS, MAX_NB_OF_ELEMS)
     step = randint(MIN_STEP, MAX_STEP)
     start = randint(RANGE_START, RANGE_END)
