@@ -9,7 +9,7 @@ MIN_STEP = -50
 MAX_STEP = 50
 
 
-def format_prog_list_into_str(prog_list, index_to_omit):
+def format_list_to_str(prog_list, index_to_omit):
     i = 0
     prog_len = len(prog_list)
     prog_str = ""
@@ -24,13 +24,13 @@ def format_prog_list_into_str(prog_list, index_to_omit):
 
 
 def get_quest_and_answ_prog():
-    prog_len = randint(MIN_NB_OF_ELEMS, MAX_NB_OF_ELEMS)
-    prog_step = randint(MIN_STEP, MAX_STEP)
-    prog_start = randint(RANGE_START, RANGE_END)
-    prog_list = []
-    for i in range(prog_len):
-        prog_list.append(prog_start + (i * prog_step))
-    index_to_omit = randint(0, prog_len - 1)
-    prog_str = format_prog_list_into_str(prog_list, index_to_omit)
-    answer = str(prog_list[index_to_omit])
-    return prog_str, answer
+    len = randint(MIN_NB_OF_ELEMS, MAX_NB_OF_ELEMS)
+    step = randint(MIN_STEP, MAX_STEP)
+    start = randint(RANGE_START, RANGE_END)
+    list = []
+    for i in range(len):
+        list.append(start + (i * step))
+    index_to_omit = randint(0, len - 1)
+    list_as_string = format_list_to_str(list, index_to_omit)
+    answer = str(list[index_to_omit])
+    return list_as_string, answer

@@ -16,4 +16,4 @@ def get_quest_and_answ_calc():
         answer = x - y
     elif operator == "*":
         answer = x * y
-    return str(x) + " " + operator + " " + str(y), answer
+    return f"{x} {operator} {y}", answer
